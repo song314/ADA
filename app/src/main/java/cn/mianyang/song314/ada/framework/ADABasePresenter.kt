@@ -5,6 +5,8 @@ import androidx.lifecycle.LifecycleOwner
 
 abstract class ADABasePresenter<out VM : ADABaseViewModel> : IADALifecycle {
 
+    abstract val viewModel :VM
+
     override fun onCreate(owner: LifecycleOwner) {
     }
 

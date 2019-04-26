@@ -22,6 +22,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <fragment
+            android:layout_marginTop="?attr/actionBarSize"
             android:id="@+id/garden_nav_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

@@ -33,6 +33,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    //for the bind adapter of RecyclerView
+    implementation 'com.github.devahamed:multi-view-adapter:1.3.0'
+
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'

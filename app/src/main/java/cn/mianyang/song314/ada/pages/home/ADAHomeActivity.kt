@@ -20,10 +20,11 @@ import cn.mianyang.song314.ada.utils.AppUtils
 
 class ADAHomeActivity : ADABaseActivity<ADAHomePresenter>() {
 
-    override val viewModel: ADABaseViewModel
+    override val viewModel: ADAHomeViewModel
         get() = ViewModelProviders.of(this).get(ADAHomeViewModel::class.java)
+
     override val presenter: ADAHomePresenter
-        get() = ADAHomePresenter()
+        get() = ADAHomePresenter(viewModel)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
