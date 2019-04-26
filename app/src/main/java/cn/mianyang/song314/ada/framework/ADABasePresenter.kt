@@ -3,7 +3,7 @@ package cn.mianyang.song314.ada.framework
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 
-class ADABasePresenter<out VM: ADABaseViewModel> : IADALifecycle {
+abstract class ADABasePresenter<out VM : ADABaseViewModel> : IADALifecycle {
 
     override fun onCreate(owner: LifecycleOwner) {
     }
