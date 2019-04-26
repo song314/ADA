@@ -5,4 +5,9 @@ import cn.mianyang.song314.ada.framework.ADABasePresenter
 class ADAHomePresenter : ADABasePresenter<ADAHomeViewModel>() {
 
 
+    fun clickFab() {
+
+    }
+
+
 }

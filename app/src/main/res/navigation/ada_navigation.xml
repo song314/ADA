@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/ada_home_fragment"
+            android:id="@+id/ada_navigation">
+
+    <fragment
+            android:id="@+id/ada_home_fragment"
+            android:name="cn.mianyang.song314.ada.pages.home.ADAHomeFragment"
+            android:label="主页"
+            tools:layout="@layout/ada_fragment_home"
+            />
+</navigation>
