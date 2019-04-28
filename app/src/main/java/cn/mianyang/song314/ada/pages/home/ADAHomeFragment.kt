@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.mianyang.song314.ada.R
@@ -46,24 +47,28 @@ class ADAHomeFragment : ADABaseFragment<ADAHomePresenter>() {
             ada_home_rv.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL, false)
         })
     }
+
+    private inner class ADAOpenSourceBinder : ItemBinder<ADAOpenSource, ADAOpenSourceBinder.MyItemViewHolder>() {
+
+        override fun create(inflater: LayoutInflater, parent: ViewGroup?): MyItemViewHolder {
+            return MyItemViewHolder(inflater.inflate(R.layout.binder_home_open_source, parent, false))
+        }
+
+        override fun canBindData(item: Any?): Boolean {
+            return item is ADAOpenSource
+        }
+
+        override fun bind(holder: MyItemViewHolder, item: ADAOpenSource) {
+            holder.itemView.ada_binder_home_os_text.text = item.name
+            holder.itemView.setOnClickListener {
+                Navigation.findNavController(activity!!, R.id.garden_nav_fragment).navigate(R.id.action_ada_home_fragment_to_ada_accessibility)
+            }
+        }
+
+
+        private inner class MyItemViewHolder(itemView: View) : ItemViewHolder<ADAOpenSource>(itemView) {
+
+        }
+    }
 }
 
-private class ADAOpenSourceBinder : ItemBinder<ADAOpenSource, ADAOpenSourceBinder.MyItemViewHolder>() {
-
-    override fun create(inflater: LayoutInflater, parent: ViewGroup?): MyItemViewHolder {
-        return MyItemViewHolder(inflater.inflate(R.layout.binder_home_open_source, parent, false))
-    }
-
-    override fun canBindData(item: Any?): Boolean {
-        return item is ADAOpenSource
-    }
-
-    override fun bind(holder: MyItemViewHolder, item: ADAOpenSource) {
-        holder.itemView.ada_binder_home_os_text.text = item.name
-    }
-
-
-    private inner class MyItemViewHolder(itemView: View) : ItemViewHolder<ADAOpenSource>(itemView) {
-
-    }
-}

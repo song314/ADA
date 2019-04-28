@@ -10,5 +10,15 @@
             android:name="cn.mianyang.song314.ada.pages.home.ADAHomeFragment"
             android:label="主页"
             tools:layout="@layout/ada_fragment_home"
-            />
+            >
+        <action
+                android:id="@+id/action_ada_home_fragment_to_ada_accessibility"
+                app:destination="@+id/ada_accessibility"
+                app:popUpTo="@+id/ada_home_fragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/ada_accessibility"
+            tools:layout="@layout/adaaccessibility_fragment"
+            android:name="cn.mianyang.song314.ada.pages.system.ADAAccessibilityServiceFragment"/>
 </navigation>
