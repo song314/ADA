@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/lib_accessibility_back"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="继续拍摄"/>
+
+        <Button
+                android:id="@+id/lib_accessibility_otg"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="打开OTG"/>
+
+        <Button
+                android:id="@+id/lib_accessibility_camera_connect_detection"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="连接诊断"/>
+
+        <Button
+                android:id="@+id/lib_accessibility_close"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="关闭助手"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:id="@+id/lib_tip_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

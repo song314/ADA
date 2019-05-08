@@ -34,7 +34,7 @@ class ADAAccessibilityServiceFragment : ADABaseFragment<ADAAccessibilityServiceP
             try {
                 startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
             } catch (e: Exception) {
-                startActivity(Intent(Settings.ACTION_SETTINGS))
+                startActivity(Intent(Settings.ACTION_DREAM_SETTINGS))
                 e.printStackTrace()
             }
         }

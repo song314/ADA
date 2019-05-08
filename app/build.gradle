@@ -41,4 +41,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation project(path: ':libaccessibility')
 }
