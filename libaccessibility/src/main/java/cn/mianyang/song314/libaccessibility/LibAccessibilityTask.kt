@@ -88,6 +88,14 @@ class LibAccessibilityTask(
 
         fun autoClick(info: AccessibilityNodeInfo): Boolean {
             Log.i("TTTTTT", info.toString())
+            Log.i("TTTTTTCB", "-----------------------")
+            val cb = getCheckBox(info)
+            Log.i("TTTT TTCB", "-----------------------")
+            if (cb?.isChecked == true) {
+                Log.i("TTTTTTCB", "btn is enable  ${cb.className}:" + cb.isChecked)
+                return true
+            }
+
             return if (info.performAction(AccessibilityNodeInfo.ACTION_CLICK)) {
                 true
             } else {
@@ -95,6 +103,24 @@ class LibAccessibilityTask(
                     autoClick(this)
                 } ?: false
             }
+        }
+
+        private fun getCheckBox(info: AccessibilityNodeInfo): AccessibilityNodeInfo? {
+            if (info.childCount > 0) {
+                for (i in 0..info.childCount) {
+                    val child = info.getChild(0)
+                    if (child.childCount > 0) {
+                        getCheckBox(child)
+                    }
+
+                    Log.i("TTTTTTCB", "${child.className}:" + child.isChecked)
+                    if (child.isCheckable) {
+                        return child
+                    }
+
+                }
+            }
+            return null
         }
 
     }
