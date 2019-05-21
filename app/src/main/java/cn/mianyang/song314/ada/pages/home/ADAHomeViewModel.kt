@@ -6,10 +6,15 @@ import cn.mianyang.song314.ada.framework.ADABaseViewModel
 
 class ADAHomeViewModel(application: Application) : ADABaseViewModel(application) {
 
-    val openSourceList =  MutableLiveData<MutableList<ADAOpenSource>>()
+    val openSourceList = MutableLiveData<MutableList<ADAOpenSource>>()
 
     fun create() {
-        openSourceList.postValue(mutableListOf(ADAOpenSource("www.android.com", "无障碍")))
+        openSourceList.postValue(
+            mutableListOf(
+                ADAOpenSource("www.android.com", "无障碍"),
+                ADAOpenSource("www.android.com", "RecyclerView")
+            )
+        )
     }
 
 }

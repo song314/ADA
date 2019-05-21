@@ -15,10 +15,19 @@
                 android:id="@+id/action_ada_home_fragment_to_ada_accessibility"
                 app:destination="@+id/ada_accessibility"
                 app:popUpTo="@+id/ada_home_fragment"/>
+        <action
+                android:id="@+id/action_ada_home_fragment_to_ada_card_swipe_layout"
+                app:destination="@id/ada_card_swipe_layout"/>
     </fragment>
 
     <fragment
             android:id="@+id/ada_accessibility"
             tools:layout="@layout/adaaccessibility_fragment"
             android:name="cn.mianyang.song314.ada.pages.system.ADAAccessibilityServiceFragment"/>
+
+    <fragment
+            android:id="@+id/ada_card_swipe_layout"
+            tools:layout="@layout/ada_card_swipe_layout_fragment"
+            android:name="cn.mianyang.song314.ada.pages.views.recycleviews.ADACardSwipeLayoutFragment"
+            />
 </navigation>

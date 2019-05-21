@@ -61,7 +61,17 @@ class ADAHomeFragment : ADABaseFragment<ADAHomePresenter>() {
         override fun bind(holder: MyItemViewHolder, item: ADAOpenSource) {
             holder.itemView.ada_binder_home_os_text.text = item.name
             holder.itemView.setOnClickListener {
-                Navigation.findNavController(activity!!, R.id.garden_nav_fragment).navigate(R.id.action_ada_home_fragment_to_ada_accessibility)
+                when (item.name) {
+                    "RecyclerView" -> {
+                        Navigation.findNavController(activity!!, R.id.garden_nav_fragment)
+                            .navigate(R.id.action_ada_home_fragment_to_ada_card_swipe_layout)
+                    }
+                    else -> {
+                        Navigation.findNavController(activity!!, R.id.garden_nav_fragment)
+                            .navigate(R.id.action_ada_home_fragment_to_ada_accessibility)
+                    }
+                }
+
             }
         }
 

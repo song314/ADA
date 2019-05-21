@@ -8,8 +8,6 @@ class ADAAccessibilityServicePresenter(override val viewModel: ADAAccessibilityV
 
     fun clickBtn() {
 
-
-
     }
 
 }
